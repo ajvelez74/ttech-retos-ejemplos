@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="prueba">
+    </div>
+
+    <br>
+
+    <script>
+        // Crear un elemento div
+        var div = document.createElement("div");
+        div.style.backgroundColor = "lightblue";
+        div.style.padding = "20px";
+        div.style.borderRadius = "5px";
+        div.innerHTML = "Hola, este es un div creado con JavaScript.";
+        // Agregar el div al cuerpo del documento
+        document.body.appendChild(div);
+
+        // Crear otro elemento
+        var id = "prueba";
+        var p = document.createElement("p");
+        p.style.padding = "20px";
+        p.innerHTML = `
+            Este es un párrafo creado con <b>JavaScript</b> y 
+            agregado a un <b>div</b> específico con identificador 
+            <b style="color:orange">${id}</b>.
+        `;
+        // Agregar el elemento al div con id "prueba"
+        document.getElementById("prueba").appendChild(p);
+    </script>
+
+
+</body>
+</html>

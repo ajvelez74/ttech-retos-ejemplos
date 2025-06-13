@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // Creación de un map (diccionario) en JavaScript
+        // Este diccionario contiene objetos que representan categorías
+        const categorias = {
+            "101" : { nombre: "Desarrollo Web", descrpcion: "Cursos sobre tecnologías para el desarrollo web" },
+            "102" : { nombre: "Programación", descrpcion: "Cursos de programación en diferentes lenguajes" },
+            "103" : { nombre: "Metodología de Desarrollo", descrpcion: "Cursos sobre metodologías ágiles y de desarrollo de software" }
+        };
+
+        // Almacenamiento de datos en localStorage
+        localStorage.setItem("categorias", JSON.stringify(categorias));
+        console.log("Datos guardados en sessionStorage");
+
+        // Las siguentes lineas de código se muestran para reforzar que la información
+        // almacenada en el localStorage se almacena como cadenas de texto (string)
+
+        const value = sessionStorage.getItem("categorias");
+        console.log("typeof(value): " + typeof(value));
+        console.log("value: " + value);
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const str = localStorage.getItem("categorias");
+        const json = JSON.parse(str);
+        const map = new Map(Object.entries(json));
+
+        console.log("typeof(str): " + typeof(str));
+        console.log("str: " + str);
+        
+        console.log("typeof(json): " + typeof(json));
+        console.log("json: " + json);
+
+        console.log("typeof(map): " + typeof(map));
+        console.log("map: " + map);
+
+        map.forEach((value, key) => {
+            console.log(`Key: ${key}, Value: ${JSON.stringify(value)}`, typeof(value));
+        });
+
+        const categoria = map.get("102");
+        console.log("typeof(categoria): " + typeof(categoria));
+        console.log("categoria: " + categoria);
+        console.log("categoria: " + categoria.nombre + " - " + categoria.descrpcion);
+
+    </script>
+    
+</body>
+</html>
